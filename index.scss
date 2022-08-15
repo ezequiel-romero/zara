@@ -1,0 +1,106 @@
+//Bootstrap
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+//Variables
+$color-primary: #000000;
+$color-secondary: #dcdcdc;
+
+//Set defaults
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: $color-primary;
+    position: relative;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+//Mixins
+@mixin link {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+        color: $color-secondary;
+        border-bottom: 1px solid $color-secondary;
+    }
+    &.icon:hover {
+        border-bottom: none;
+    }
+}
+
+a.link {
+    @include link;
+}
+
+@mixin link-list {
+    gap:0 2rem;
+    padding: 0 20px;
+    li {
+        display: inline;
+        list-style: none;
+        a {
+            @include link;
+        }
+    }
+}
+
+//Custom styles
+.next-page {
+    a {
+        border-bottom: 1px solid $color-primary;
+        text-transform: uppercase;
+        @include link;
+    }
+}
+nav {
+    padding: 2rem;
+    ul.nav-links {
+        height: 30px;
+        @include link-list;
+    }
+}
+
+.dropdown-menu {
+    @include link-list;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 1rem 2rem;
+    margin-top: 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    li {
+        display: block;
+        text-align: end;
+        padding: 0.5rem 0;
+        a {
+            border-bottom: 1px solid $color-secondary;
+        }
+    }
+}
+
+.hero {
+    .hero-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.sub-nav {
+    .sub-nav-links {
+        @include link-list;
+    }
+}
+
+.social {
+    .social-links {
+        @include link-list;
+    }
+}
+
+.footer {
+    .footer-links {
+        @include link-list;
+    }
+}

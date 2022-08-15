@@ -1,0 +1,23 @@
+{
+  "name": "zara",
+  "version": "1.0.0",
+  "description": "Zara website for my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch index.scss ./styles/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezequiel-romero/zara.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezequiel-romero/zara/issues"
+  },
+  "homepage": "https://github.com/ezequiel-romero/zara#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
